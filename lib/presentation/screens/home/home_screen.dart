@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widgets_albin/config/menu/menu_items.dart';
+import 'package:widgets_albin/presentation/screens/buttons/buttons_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -43,13 +44,25 @@ class _CustomListTitle extends StatelessWidget {
     final colors = Theme.of(context).colorScheme;
 
     return ListTile(
-      leading: Icon(menuItem.icon,color: colors.primary,),
-      trailing: Icon(Icons.arrow_forward_ios_rounded,color: colors.primary,),
+      leading: Icon(
+        menuItem.icon,
+        color: colors.primary,
+      ),
+      trailing: Icon(
+        Icons.arrow_forward_ios_rounded,
+        color: colors.primary,
+      ),
       title: Text(menuItem.title),
       subtitle: Text(menuItem.subTitle),
       onTap: () {
-        //TODO:navegar a otra pantalla
+        // Navigator.of(context).push(
+        //   MaterialPageRoute(
+        //     builder: (context) => const ButtonsScreen(),
+        //   ),
+        // );
+        Navigator.pushNamed(context, menuItem.link);
       },
+      
     );
   }
 }
