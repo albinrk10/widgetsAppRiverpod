@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:widgets_albin/config/menu/menu_items.dart';
-import 'package:widgets_albin/presentation/screens/buttons/buttons_screen.dart';
+import 'package:widgets_albin/presentation/screens/cards/cards_screen.dart';
 
 class HomeScreen extends StatelessWidget {
+  static const String name = 'home_screen';
+
   const HomeScreen({super.key});
 
   @override
@@ -62,8 +64,10 @@ class _CustomListTitle extends StatelessWidget {
         //   ),
         // );
         // Navigator.pushNamed(context, menuItem.link);
-        //TODO: con go router 
-         context.push(menuItem.link);
+        //TODO: con go router
+        // context.pushNamed(CardsScreen.name);
+        context.push(menuItem.link);
+        
       },
     );
   }
