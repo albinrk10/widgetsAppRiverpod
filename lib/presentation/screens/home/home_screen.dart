@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:widgets_albin/config/menu/menu_items.dart';
 import 'package:widgets_albin/presentation/screens/buttons/buttons_screen.dart';
 
@@ -60,9 +61,10 @@ class _CustomListTitle extends StatelessWidget {
         //     builder: (context) => const ButtonsScreen(),
         //   ),
         // );
-        Navigator.pushNamed(context, menuItem.link);
+        // Navigator.pushNamed(context, menuItem.link);
+        //TODO: con go router 
+         context.push(menuItem.link);
       },
-      
     );
   }
 }
