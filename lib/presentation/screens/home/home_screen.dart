@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:widgets_albin/config/menu/menu_items.dart';
-import 'package:widgets_albin/presentation/screens/cards/cards_screen.dart';
+
+import '../../widgets/side_menu.dart';
+
 
 class HomeScreen extends StatelessWidget {
   static const String name = 'home_screen';
@@ -15,6 +17,7 @@ class HomeScreen extends StatelessWidget {
         title: const Text('Flutter + Material 3'),
       ),
       body: const _Homeview(),
+      drawer: const SideMenu()
     );
   }
 }
