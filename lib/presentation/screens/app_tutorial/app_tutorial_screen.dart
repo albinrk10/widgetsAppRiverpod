@@ -48,7 +48,7 @@ class _AppTutorailScreenState extends State<AppTutorailScreen> {
           endReached = true;
         });
       }
-      print('${pageviewController.page}');
+      //print('${pageviewController.page}');
     });
   }
 
